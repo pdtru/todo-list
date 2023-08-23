@@ -6,6 +6,18 @@
   margin: 0;
 }
 
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-container {
+  flex: 1;
+}
+
 .footer {
   display: flex;
   align-items: center;
