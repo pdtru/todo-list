@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-github {
+  font-size: 24px;
+  color: #6e5494;
+  transition: transform 0.5s ease-in-out;
+}
+
+.fa-github:hover {
+  color: #8a77a5;
+}
