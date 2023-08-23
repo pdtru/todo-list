@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "live": "webpack --watch"
   },
   "repository": {
     "type": "git",
