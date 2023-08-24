@@ -1,5 +1,5 @@
-import Main from './Main/Main';
-import Menu from './Menu/Menu';
+import Main from './Main';
+import Menu from './Menu';
 
 class MainContainer {
   menu = new Menu();
