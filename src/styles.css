@@ -32,6 +32,7 @@ body {
   margin: 16px 24px;
   font-size: 32px;
   font-weight: 600;
+  color: rgba(70, 70, 70, 255);
 }
 
 .project-header {
@@ -44,6 +45,7 @@ body {
   margin: 16px 24px;
   font-size: 20px;
   font-weight: 600;
+  color: rgba(97, 97, 97, 255);
 }
 
 .add-project-button {
@@ -52,9 +54,18 @@ body {
   padding: 8px 20px;
   font-size: 16px;
   font-weight: 500;
-  color: rgba(45, 92, 248, 255);
   border-style: none;
   border-radius: 8px;
+  color: rgba(45, 92, 248, 255);
+  background-color: rgba(227, 235, 250, 255);
+}
+
+.add-project-button:hover {
+  cursor: pointer;
+  background-color: rgba(216, 229, 255, 255);
+}
+
+.add-project-button:active {
   background-color: rgba(227, 235, 250, 255);
 }
 
