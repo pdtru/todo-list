@@ -1,9 +1,10 @@
-import AddProjectButton from '../AddProjectButton';
+import NewProjectButton from './NewProjectButton';
 import ProjectTitle from './ProjectTitle';
 
 class ProjectHeader {
   projectTitle = new ProjectTitle();
-  addProjectButton = new AddProjectButton();
+  addProjectButton = new NewProjectButton();
+
   render = () => {
     const container = document.createElement('div');
     container.className = 'project-header';
