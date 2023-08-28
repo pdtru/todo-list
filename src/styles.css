@@ -67,8 +67,8 @@ body {
 
 .current-project-list-item {
   font-weight: 600;
-  background-color: rgba(235, 235, 235, 255);
   color: rgba(33, 37, 41, 255);
+  background-color: rgba(235, 235, 235, 255);
 }
 
 .delete-project-button {
@@ -140,6 +140,16 @@ body {
   font-size: 52px;
   font-weight: 600;
   color: rgba(33, 37, 41, 255);
+}
+
+.new-task-button {
+  padding: 8px;
+  margin-top: 24px;
+  font-size: 20px;
+  border-color: rgba(244, 244, 244, 255);
+  border-style: solid;
+  border-radius: 8px;
+  color: rgba(97, 97, 97, 255);
 }
 
 .footer {

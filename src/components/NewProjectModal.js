@@ -14,7 +14,7 @@ class NewProjectModal {
 
     this.nameInput = document.createElement('input');
     this.nameInput.className = 'new-project-input';
-    this.nameInput.placeholder = '+ New Project';
+    this.nameInput.placeholder = '+ Add New Project';
 
     this.submitButton = document.createElement('button');
     this.submitButton.innerText = 'Add';
