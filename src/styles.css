@@ -53,7 +53,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
+  padding: 12px;
   margin: 8px 16px;
   border-radius: 12px;
   font-size: 18px;
@@ -118,11 +118,28 @@ body {
 .new-project-modal {
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 10%;
+  border-radius: 8px;
+  border-style: none;
 }
+
+.new-project-input {
+  border-style: none;
+}
+
+.new-project-input:focus {
+  border-style: none;
+}
+
 .main {
   flex: 4;
+  margin: 24px 24px 0px 24px;
+}
+
+.main-title {
+  font-size: 52px;
+  font-weight: 600;
+  color: rgba(33, 37, 41, 255);
 }
 
 .footer {

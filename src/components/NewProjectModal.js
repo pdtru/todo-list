@@ -11,14 +11,18 @@ class NewProjectModal {
     container.className = 'new-project-modal';
     const inputContainer = document.createElement('div');
     inputContainer.className = 'input-container';
+
     this.nameInput = document.createElement('input');
+    this.nameInput.className = 'new-project-input';
+    this.nameInput.placeholder = '+ New Project';
 
     this.submitButton = document.createElement('button');
     this.submitButton.innerText = 'Add';
+
     inputContainer.append(this.nameInput, this.submitButton);
     container.append(inputContainer);
-    this.component = container;
 
+    this.component = container;
     this.component.addEventListener('click', (e) => {
       const dialogDimensions = this.component.getBoundingClientRect();
       if (

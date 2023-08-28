@@ -1,8 +1,10 @@
+import AppState from '../stores/AppState';
+
 class MainTitle {
   render = () => {
     const container = document.createElement('div');
     container.className = 'main-title';
-    container.innerText = '';
+    container.innerText = AppState.currentProject.name;
 
     return container;
   };
