@@ -8,11 +8,15 @@ class NewProjectModal {
 
   render = () => {
     const container = document.createElement('dialog');
-    container.setAttribute('data-modal', true);
+    container.className = 'new-project-modal';
+    const inputContainer = document.createElement('div');
+    inputContainer.className = 'input-container';
     this.nameInput = document.createElement('input');
+
     this.submitButton = document.createElement('button');
     this.submitButton.innerText = 'Add';
-    container.append(this.nameInput, this.submitButton);
+    inputContainer.append(this.nameInput, this.submitButton);
+    container.append(inputContainer);
     this.component = container;
 
     this.component.addEventListener('click', (e) => {
@@ -27,6 +31,12 @@ class NewProjectModal {
       }
     });
 
+    this.nameInput.addEventListener('keypress', (event) => {
+      console.log(event);
+      if (event.key === 'Enter') {
+        this.onSubmit();
+      }
+    });
     this.submitButton.addEventListener('click', this.onSubmit);
 
     return container;

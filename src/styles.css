@@ -32,7 +32,7 @@ body {
   margin: 16px 24px;
   font-size: 32px;
   font-weight: 600;
-  color: rgba(70, 70, 70, 255);
+  color: rgba(33, 37, 41, 255);
 }
 
 .project-header {
@@ -46,6 +46,52 @@ body {
   font-size: 20px;
   font-weight: 600;
   color: rgba(97, 97, 97, 255);
+}
+
+.project-list-item {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  margin: 8px 16px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(97, 97, 97, 255);
+}
+
+.project-list-item:hover {
+  cursor: pointer;
+}
+
+.current-project-list-item {
+  font-weight: 600;
+  background-color: rgba(235, 235, 235, 255);
+  color: rgba(33, 37, 41, 255);
+}
+
+.delete-project-button {
+  font-size: 16px;
+  height: 24px;
+  width: 24px;
+  border-style: none;
+  border-radius: 50%;
+  color: rgba(97, 97, 97, 255);
+  background-color: rgba(244, 244, 244, 255);
+}
+
+.delete-project-button:hover {
+  cursor: pointer;
+  background-color: rgba(220, 220, 220, 255);
+}
+
+.delete-project-button:active {
+  background-color: rgba(200, 200, 200, 255);
+}
+
+.current-delete-project-button {
+  background-color: rgba(235, 235, 235, 255);
 }
 
 .new-project-button {
@@ -69,6 +115,12 @@ body {
   background-color: rgba(227, 235, 250, 255);
 }
 
+.new-project-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 .main {
   flex: 4;
 }

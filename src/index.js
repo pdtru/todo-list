@@ -2,7 +2,6 @@ import _ from 'lodash';
 import './styles.css';
 import favicon from '/src/assets/images/logo.png?v=2';
 import AppState from './stores/AppState';
-import App from './components/App';
 
 function setFavicons(favImg) {
   let headTitle = document.querySelector('head');
@@ -13,6 +12,5 @@ function setFavicons(favImg) {
 }
 setFavicons(favicon);
 
-AppState.app = new App();
-
+AppState.projects.initialize();
 AppState.app.render();
