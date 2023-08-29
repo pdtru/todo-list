@@ -1,13 +1,13 @@
 class Task {
   id = Date.now();
-  title;
+  name;
   description;
   dueDate;
   priority;
   completed = false;
 
-  constructor(title, description, dueDate, priority) {
-    this.title = title;
+  constructor(name, description, dueDate, priority) {
+    this.name = name;
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;

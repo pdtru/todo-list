@@ -1,13 +1,13 @@
 import MainTitle from './MainTitle';
-import NewTaskButton from './NewTaskButton';
+import NewTaskInput from './NewTaskInput';
 
 class Main {
   mainTitle = new MainTitle();
-  newTaskButton = new NewTaskButton();
+  newTaskInput = new NewTaskInput();
   render = () => {
     const container = document.createElement('div');
     container.className = 'main';
-    container.append(this.mainTitle.render(), this.newTaskButton.render());
+    container.append(this.mainTitle.render(), this.newTaskInput.render());
     return container;
   };
 }
