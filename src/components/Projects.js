@@ -9,6 +9,7 @@ class Projects {
     const container = document.createElement('div');
     container.className = 'projects';
     container.append(this.projectHeader.render());
+
     for (const project of AppState.projects.projects.values()) {
       const projectListItem = new ProjectListItem(project);
       container.append(projectListItem.render());

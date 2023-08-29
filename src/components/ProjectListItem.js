@@ -36,6 +36,7 @@ class ProjectListItem {
   buttonOnCLick = () => {
     AppState.projects.deleteProject(this.project.id);
     this.project.name = '';
+    AppState.app.render();
   };
 }
 

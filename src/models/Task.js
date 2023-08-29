@@ -6,7 +6,7 @@ class Task {
   priority;
   completed = false;
 
-  constructor(name, description, dueDate, priority) {
+  constructor(name, description = '', dueDate = '', priority = '') {
     this.name = name;
     this.description = description;
     this.dueDate = dueDate;
