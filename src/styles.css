@@ -30,7 +30,7 @@ body {
 
 .menu-title {
   margin: 16px 24px;
-  font-size: 32px;
+  font-size: 42px;
   font-weight: 600;
   color: rgba(33, 37, 41, 255);
 }
@@ -43,7 +43,7 @@ body {
 
 .project-title {
   margin: 16px 24px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
   color: rgba(97, 97, 97, 255);
 }
@@ -71,6 +71,30 @@ body {
   background-color: rgba(235, 235, 235, 255);
 }
 
+.new-project-input-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 8px 16px;
+  padding: 6px;
+  border-radius: 8px;
+  border-style: solid;
+  color: rgba(97, 97, 97, 255);
+  border-color: rgba(235, 235, 235, 255);
+}
+
+.new-project-text {
+  color: rgba(97, 97, 97, 255);
+  margin: 6px;
+}
+
+.new-project-input {
+  flex: 1;
+  font-size: 18px;
+  border-style: none;
+  background-color: rgba(244, 244, 244, 255);
+}
+
 .delete-project-button {
   font-size: 16px;
   height: 24px;
@@ -94,51 +118,13 @@ body {
   background-color: rgba(235, 235, 235, 255);
 }
 
-.new-project-button {
-  white-space: nowrap;
-  margin: 16px 24px;
-  height: 100%;
-  padding: 8px 20px;
-  font-size: 16px;
-  font-weight: 500;
-  border-style: none;
-  border-radius: 8px;
-  color: rgba(45, 92, 248, 255);
-  background-color: rgba(227, 235, 250, 255);
-}
-
-.new-project-button:hover {
-  cursor: pointer;
-  background-color: rgba(216, 229, 255, 255);
-}
-
-.new-project-button:active {
-  background-color: rgba(227, 235, 250, 255);
-}
-
-.new-project-modal {
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  border-radius: 8px;
-  border-style: none;
-}
-
-.new-project-input {
-  border-style: none;
-}
-
-.new-project-input:focus {
-  border-style: none;
-}
-
 .main {
   flex: 4;
   margin: 24px 24px 0px 24px;
 }
 
 .main-title {
-  font-size: 52px;
+  font-size: 64px;
   font-weight: 600;
   color: rgba(33, 37, 41, 255);
 }
@@ -148,7 +134,6 @@ body {
   align-items: center;
   padding: 12px;
   margin-top: 24px;
-
   border-color: rgba(244, 244, 244, 255);
   border-style: solid;
   border-radius: 8px;
@@ -179,6 +164,42 @@ input,
 select,
 textarea {
   color: rgba(97, 97, 97, 255);
+}
+
+.task-list-item {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  margin: 8px 16px;
+  font-size: 18px;
+  font-weight: 500;
+  border-bottom-style: solid;
+  border-color: rgba(244, 244, 244, 255);
+  color: rgba(97, 97, 97, 255);
+}
+
+.task-list-item:hover {
+  cursor: pointer;
+}
+
+.delete-task-button {
+  font-size: 16px;
+  height: 24px;
+  width: 24px;
+  border-style: none;
+  border-radius: 50%;
+  background-color: white;
+  color: rgba(97, 97, 97, 255);
+}
+
+.delete-task-button:hover {
+  cursor: pointer;
+  background-color: rgba(220, 220, 220, 255);
+}
+
+.delete-task-button:active {
+  background-color: rgba(200, 200, 200, 255);
 }
 
 .footer {

@@ -1,4 +1,3 @@
-import AppState from '../stores/AppState';
 import MainContainer from './MainContainer';
 import Footer from './Footer';
 
@@ -9,11 +8,7 @@ class App {
 
   render = () => {
     this.body.innerHTML = '';
-    this.body.append(
-      this.mainContainer.render(),
-      AppState.newProjectModal.render(),
-      this.footer.render()
-    );
+    this.body.append(this.mainContainer.render(), this.footer.render());
   };
 }
 

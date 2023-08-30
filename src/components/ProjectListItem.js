@@ -9,21 +9,30 @@ class ProjectListItem {
     const container = document.createElement('div');
     container.className = 'project-list-item';
 
+    const nameContainer = document.createElement('div');
+    nameContainer.className = 'name-container';
+
     const name = document.createElement('p');
     name.innerText = this.project.name;
+    nameContainer.append(name);
+
+    const deleteProjectButtonContainer = document.createElement('div');
+    deleteProjectButtonContainer.className = 'delete-project-button-container';
 
     const deleteProjectButton = document.createElement('button');
     deleteProjectButton.className = 'delete-project-button';
     deleteProjectButton.innerText = '×';
+
+    deleteProjectButtonContainer.append(deleteProjectButton);
 
     if (this.project.id == AppState.currentProject.id) {
       container.classList.add('current-project-list-item');
       deleteProjectButton.classList.add('current-delete-project-button');
     }
 
-    container.append(name, deleteProjectButton);
+    container.append(nameContainer, deleteProjectButtonContainer);
     container.addEventListener('click', this.projectOnClick);
-    deleteProjectButton.addEventListener('click', this.buttonOnCLick);
+    deleteProjectButton.onclick = this.buttonOnClick;
 
     return container;
   };
@@ -33,9 +42,10 @@ class ProjectListItem {
     AppState.app.render();
   };
 
-  buttonOnCLick = () => {
+  buttonOnClick = () => {
     AppState.projects.deleteProject(this.project.id);
-    this.project.name = '';
+    if (AppState.currentProject.id == this.project.id)
+      AppState.currentProject = undefined;
     AppState.app.render();
   };
 }

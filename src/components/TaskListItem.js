@@ -17,8 +17,20 @@ class TaskListItem {
     deleteTaskButton.innerText = '×';
 
     container.append(name, deleteTaskButton);
+    container.addEventListener('click', this.taskOnClick);
+    deleteTaskButton.onclick = this.buttonOnClick;
 
     return container;
+  };
+
+  taskOnClick = () => {
+    AppState.currentTask = this.task;
+    AppState.app.render();
+  };
+
+  buttonOnClick = () => {
+    AppState.currentProject.deleteTask(this.task.id);
+    AppState.app.render();
   };
 }
 
