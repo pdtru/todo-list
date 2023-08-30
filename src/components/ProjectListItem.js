@@ -10,7 +10,7 @@ class ProjectListItem {
     container.className = 'project-list-item';
 
     const nameContainer = document.createElement('div');
-    nameContainer.className = 'name-container';
+    nameContainer.className = 'project-name-container';
 
     const name = document.createElement('p');
     name.innerText = this.project.name;
@@ -31,7 +31,7 @@ class ProjectListItem {
     }
 
     container.append(nameContainer, deleteProjectButtonContainer);
-    container.addEventListener('click', this.projectOnClick);
+    nameContainer.addEventListener('click', this.projectOnClick);
     deleteProjectButton.onclick = this.buttonOnClick;
 
     return container;
@@ -45,7 +45,7 @@ class ProjectListItem {
   buttonOnClick = () => {
     AppState.projects.deleteProject(this.project.id);
     if (AppState.currentProject.id == this.project.id)
-      AppState.currentProject = undefined;
+      AppState.currentProject = null;
     AppState.app.render();
   };
 }

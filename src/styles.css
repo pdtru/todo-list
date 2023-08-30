@@ -49,20 +49,11 @@ body {
 }
 
 .project-list-item {
-  flex: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
   margin: 8px 16px;
   border-radius: 12px;
-  font-size: 18px;
-  font-weight: 500;
-  color: rgba(97, 97, 97, 255);
-}
-
-.project-list-item:hover {
-  cursor: pointer;
 }
 
 .current-project-list-item {
@@ -71,28 +62,21 @@ body {
   background-color: rgba(235, 235, 235, 255);
 }
 
-.new-project-input-container {
+.project-name-container {
   flex: 1;
-  display: flex;
-  align-items: center;
-  margin: 8px 16px;
-  padding: 6px;
-  border-radius: 8px;
-  border-style: solid;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 12px;
   color: rgba(97, 97, 97, 255);
-  border-color: rgba(235, 235, 235, 255);
 }
 
-.new-project-text {
-  color: rgba(97, 97, 97, 255);
-  margin: 6px;
+.project-name-container:hover {
+  cursor: pointer;
 }
 
-.new-project-input {
-  flex: 1;
-  font-size: 18px;
-  border-style: none;
-  background-color: rgba(244, 244, 244, 255);
+.delete-project-button-container {
+  margin-right: 6px;
 }
 
 .delete-project-button {
@@ -118,6 +102,31 @@ body {
   background-color: rgba(235, 235, 235, 255);
 }
 
+.new-project-input-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin: 8px 16px;
+  padding: 6px;
+  border-radius: 8px;
+  border-style: solid;
+  color: rgba(97, 97, 97, 255);
+  border-color: rgba(235, 235, 235, 255);
+}
+
+.new-project-text {
+  color: rgba(97, 97, 97, 255);
+  font-size: 20px;
+  margin: 6px;
+}
+
+.new-project-input {
+  flex: 1;
+  font-size: 20px;
+  border-style: none;
+  background-color: rgba(244, 244, 244, 255);
+}
+
 .main {
   flex: 4;
   margin: 24px 24px 0px 24px;
@@ -140,18 +149,14 @@ body {
   color: rgba(97, 97, 97, 255);
 }
 
-.new-task-input-container:active {
-  background-color: none;
-}
-
 .new-task-text {
   margin: 6px;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .new-task-input {
   flex: 1;
-  font-size: 20px;
+  font-size: 24px;
   border-style: none;
 }
 
@@ -184,9 +189,9 @@ textarea {
 }
 
 .delete-task-button {
-  font-size: 16px;
-  height: 24px;
-  width: 24px;
+  font-size: 20px;
+  height: 28px;
+  width: 28px;
   border-style: none;
   border-radius: 50%;
   background-color: white;
