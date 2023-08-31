@@ -25,7 +25,10 @@ class ProjectListItem {
 
     deleteProjectButtonContainer.append(deleteProjectButton);
 
-    if (this.project.id == AppState.currentProject.id) {
+    if (
+      AppState.currentProject &&
+      this.project.id == AppState.currentProject.id
+    ) {
       container.classList.add('current-project-list-item');
       deleteProjectButton.classList.add('current-delete-project-button');
     }
@@ -44,7 +47,10 @@ class ProjectListItem {
 
   buttonOnClick = () => {
     AppState.projects.deleteProject(this.project.id);
-    if (AppState.currentProject.id == this.project.id)
+    if (
+      AppState.currentProject &&
+      AppState.currentProject.id == this.project.id
+    )
       AppState.currentProject = null;
     AppState.app.render();
   };

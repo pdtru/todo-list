@@ -1,3 +1,4 @@
+import AppState from '../stores/AppState';
 import MainTitle from './MainTitle';
 import NewTaskInput from './NewTaskInput';
 import Tasks from './Tasks';
@@ -10,11 +11,15 @@ class Main {
   render = () => {
     const container = document.createElement('div');
     container.className = 'main';
-    container.append(
-      this.mainTitle.render(),
-      this.newTaskInput.render(),
-      this.tasks.render()
-    );
+
+    if (AppState.currentProject !== null) {
+      container.append(
+        this.mainTitle.render(),
+        this.newTaskInput.render(),
+        this.tasks.render()
+      );
+    }
+
     return container;
   };
 }
