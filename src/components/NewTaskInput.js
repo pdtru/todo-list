@@ -1,3 +1,4 @@
+import Cache from '../controllers/Cache';
 import Task from '../models/Task';
 import AppState from '../stores/AppState';
 
@@ -31,6 +32,7 @@ class NewTaskInput {
   onSubmit = () => {
     const task = new Task(this.input.value);
     AppState.currentProject.insertTask(task.id, task);
+    // Cache.saveProject(AppState.currentProject);
     AppState.app.render();
   };
 }

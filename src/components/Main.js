@@ -12,7 +12,7 @@ class Main {
     const container = document.createElement('div');
     container.className = 'main';
 
-    if (AppState.currentProject !== null) {
+    if (AppState.currentProject) {
       container.append(
         this.mainTitle.render(),
         this.newTaskInput.render(),

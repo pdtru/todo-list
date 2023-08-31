@@ -1,3 +1,4 @@
+import Cache from '../controllers/Cache';
 import AppState from '../stores/AppState';
 
 class ProjectListItem {
@@ -47,6 +48,8 @@ class ProjectListItem {
 
   buttonOnClick = () => {
     AppState.projects.deleteProject(this.project.id);
+    Cache.saveProjects(AppState.projects.projects);
+    Cache.deleteProject(this.project.id);
     if (
       AppState.currentProject &&
       AppState.currentProject.id == this.project.id
