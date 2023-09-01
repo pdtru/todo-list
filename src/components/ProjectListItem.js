@@ -49,7 +49,7 @@ class ProjectListItem {
   buttonOnClick = () => {
     AppState.projects.deleteProject(this.project.id);
     Cache.saveProjects(AppState.projects.projects);
-    Cache.deleteProject(this.project.id);
+    Cache.deleteProject(this.project);
     if (
       AppState.currentProject &&
       AppState.currentProject.id == this.project.id

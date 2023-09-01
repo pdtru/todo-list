@@ -1,3 +1,4 @@
+import Cache from '../controllers/Cache';
 import AppState from '../stores/AppState';
 import App from './App';
 
@@ -52,6 +53,8 @@ class TaskListItem {
 
   buttonOnClick = () => {
     AppState.currentProject.deleteTask(this.task.id);
+    Cache.deleteTask(this.task.id);
+    Cache.saveProject(AppState.currentProject);
     AppState.app.render();
   };
 }

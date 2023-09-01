@@ -31,7 +31,6 @@ class NewProjectInput {
 
   onSubmit() {
     const project = new Project(this.input.value);
-    Cache.saveProject(project);
     AppState.projects.insertProject(project.id, project);
     Cache.saveProjects(AppState.projects.projects);
     AppState.app.render();

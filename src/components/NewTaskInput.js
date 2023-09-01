@@ -32,7 +32,7 @@ class NewTaskInput {
   onSubmit = () => {
     const task = new Task(this.input.value);
     AppState.currentProject.insertTask(task.id, task);
-    // Cache.saveProject(AppState.currentProject);
+    Cache.saveProjects(AppState.projects.projects);
     AppState.app.render();
   };
 }

@@ -1,10 +1,11 @@
 class Project {
   name;
-  id = Date.now();
+  id;
   tasks = new Map();
 
-  constructor(name) {
+  constructor(name, id = Date.now().toString()) {
     this.name = name;
+    this.id = id;
   }
 
   deleteTask = (id) => {
