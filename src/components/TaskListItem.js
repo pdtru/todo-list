@@ -48,6 +48,7 @@ class TaskListItem {
   checkBoxOnClick = () => {
     this.task.toggleComplete();
     console.log(this.task.completed);
+    Cache.saveProject(AppState.currentProject);
     AppState.app.render();
   };
 

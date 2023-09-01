@@ -4,20 +4,22 @@ class Task {
   description;
   dueDate;
   priority;
-  completed = false;
+  completed;
 
   constructor(
     name,
     description = '',
     dueDate = '',
     priority = '',
-    id = Date.now().toString()
+    id = Date.now().toString(),
+    completed = false
   ) {
     this.name = name;
     this.description = description;
     this.dueDate = dueDate;
     this.priority = priority;
     this.id = id;
+    this.completed = completed;
   }
 
   toggleComplete = () => {

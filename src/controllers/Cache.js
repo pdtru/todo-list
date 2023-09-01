@@ -172,7 +172,8 @@ class Cache {
       taskTemp.description,
       taskTemp.dueDate,
       taskTemp.priority,
-      taskTemp.id
+      taskTemp.id,
+      taskTemp.completed
     );
     return task;
   };
