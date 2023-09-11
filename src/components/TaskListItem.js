@@ -13,6 +13,7 @@ class TaskListItem {
 
     const nameContainer = document.createElement('div');
     nameContainer.className = 'task-name-container';
+    nameContainer.onclick = this.checkBoxOnClick;
 
     const checkBox = document.createElement('input');
     checkBox.className = 'task-checkbox';
