@@ -1,6 +1,5 @@
 import Cache from '../controllers/Cache';
 import AppState from '../stores/AppState';
-import App from './App';
 
 class TaskListItem {
   constructor(task) {
@@ -13,7 +12,6 @@ class TaskListItem {
 
     const nameContainer = document.createElement('div');
     nameContainer.className = 'task-name-container';
-    nameContainer.onclick = this.checkBoxOnClick;
 
     const checkBox = document.createElement('input');
     checkBox.className = 'task-checkbox';
@@ -22,6 +20,7 @@ class TaskListItem {
     checkBox.onclick = this.checkBoxOnClick;
 
     const name = document.createElement('p');
+    name.onclick = this.checkBoxOnClick;
     name.innerText = this.task.name;
 
     if (this.task.completed) {
@@ -48,7 +47,6 @@ class TaskListItem {
 
   checkBoxOnClick = () => {
     this.task.toggleComplete();
-    console.log(this.task.completed);
     Cache.saveProject(AppState.currentProject);
     AppState.app.render();
   };

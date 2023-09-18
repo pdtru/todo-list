@@ -20,7 +20,6 @@ class NewProjectInput {
     container.append(text, this.input);
 
     this.input.addEventListener('keypress', (event) => {
-      console.log(event);
       if (event.key === 'Enter') {
         this.onSubmit();
       }
