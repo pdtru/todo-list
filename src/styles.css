@@ -184,10 +184,6 @@ textarea {
   color: rgba(97, 97, 97, 255);
 }
 
-.task-list-item:hover {
-  cursor: pointer;
-}
-
 .task-name-container {
   display: flex;
   gap: 16px;
@@ -195,6 +191,14 @@ textarea {
 
 .task-checkbox {
   border-color: rgba(97, 97, 97, 255);
+}
+
+.task-checkbox:hover:hover {
+  cursor: pointer;
+}
+
+.task-name:hover {
+  cursor: pointer;
 }
 
 .completed-task-name {

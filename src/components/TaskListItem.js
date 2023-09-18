@@ -20,6 +20,7 @@ class TaskListItem {
     checkBox.onclick = this.checkBoxOnClick;
 
     const name = document.createElement('p');
+    name.className = 'task-name';
     name.onclick = this.checkBoxOnClick;
     name.innerText = this.task.name;
 
